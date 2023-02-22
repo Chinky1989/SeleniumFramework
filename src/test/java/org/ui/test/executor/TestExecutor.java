@@ -35,9 +35,7 @@ public class TestExecutor  {
 		actions.typeIn("Phone");
 		actions.clickIn("Gender");
 		actions.clickIn("Hobbies1");
-		Thread.sleep(2000);
-		actions.clickIn("Hobbies2");
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 	
 	@AfterTest
