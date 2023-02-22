@@ -28,18 +28,21 @@ public class TestExecutor  {
 		actions.typeIn("Email Address");
 	}
 	@Test
-	public void execution3()
+	public void execution3() throws InterruptedException 
 	{
 		actions.report.createTest("Fill Phone and Other details");
 		actions.testReport = actions.report.getTest();
 		actions.typeIn("Phone");
 		actions.clickIn("Gender");
 		actions.clickIn("Hobbies1");
+		Thread.sleep(2000);
 		actions.clickIn("Hobbies2");
+		Thread.sleep(2000);
 	}
 	
 	@AfterTest
-	public void completeExecution(){
+	public void completeExecution() throws InterruptedException{
+		Thread.sleep(2000);
 		actions.windowClose();
 		actions.report.getReportInstance().flush();
 	}
